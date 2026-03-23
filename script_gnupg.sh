@@ -149,3 +149,17 @@ gpg --list-keys
 
 #Este comando hace un mensaje en un documento de texto
 $ echo "Todo billar bro" > doc_no_cifrado.txt
+
+#Este comando crea un archivo cifrado de texto con el archivo de texto no cifrado
+gpg --output doc_cifrado.txt --encrypt --recipient D88787786F0156551A9495C0AC675EB444A7DCF1 doc_no_cifrado.txt
+#gpg: 2F4F679F461514E1: There is no assurance this key belongs to the named user
+
+#sub  rsa4096/2F4F679F461514E1 2026-03-18 Daniel Villarreal (AMARILLOX3434) <danielvillarrealolmedo@gmail.com>
+# Primary key fingerprint: D887 8778 6F01 5655 1A94  95C0 AC67 5EB4 44A7 DCF1
+#      Subkey fingerprint: 6A55 10A3 AE30 BBC0 881F  1BA5 2F4F 679F 4615 14E1
+#
+#It is NOT certain that the key belongs to the person named
+#in the user ID.  If you *really* know what you are doing,
+#you may answer the next question with yes.
+
+#Use this key anyway? (y/N) y
