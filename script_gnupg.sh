@@ -169,3 +169,10 @@ gpg --decrypt DAVID_doc_cifrado.txt
 #gpg: encrypted with rsa4096 key, ID D87B8615073BC8E3, created 2026-03-18
 #      "David Alejandro Torres Vengas (12345678) <davidsitotorres8@gmail.com>"
 #when haces tus momos en workspaces xdxdxd el futuro es hoy oiste diseñador grafico but te sacan del repositorio: ooo mi llave publica xdxdxd
+
+
+#Este comando firma el documento de texto
+gpg --output doc_no_cifrado_firmado.txt --clearsign doc_no_cifrado.txt
+
+#
+gpg
