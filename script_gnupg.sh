@@ -126,3 +126,9 @@ gpg --list-keys
 #      A5B18D0E6BF68025BB6F1C431C9B516DB919F577
 #uid           [ultimate] David Alejandro Torres Vengas (12345678) <davidsitotorres8@gmail.com>
 #sub   rsa4096 2026-03-18 [E] [expires: 2027-03-18]
+
+#Este comando importa la llave de mi compa
+gpg --import llave_compa.asc
+#gpg: key AC675EB444A7DCF1: public key "Daniel Villarreal (AMARILLOX3434) <danielvillarrealolmedo@gmail.com>" imported
+#gpg: Total number processed: 1
+#gpg:               imported: 1
