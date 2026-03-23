@@ -132,3 +132,20 @@ gpg --import llave_compa.asc
 #gpg: key AC675EB444A7DCF1: public key "Daniel Villarreal (AMARILLOX3434) <danielvillarrealolmedo@gmail.com>" imported
 #gpg: Total number processed: 1
 #gpg:               imported: 1
+
+#Este comando lista todas las llaves (incluyendo la de mi compa)
+gpg --list-keys
+#/home/codespace/.gnupg/pubring.kbx
+#----------------------------------
+#pub   rsa4096 2026-03-18 [SC] [expires: 2027-03-18]
+#      A5B18D0E6BF68025BB6F1C431C9B516DB919F577
+#uid           [ultimate] David Alejandro Torres Vengas (12345678) <davidsitotorres8@gmail.com>
+#sub   rsa4096 2026-03-18 [E] [expires: 2027-03-18]
+
+#pub   rsa4096 2026-03-18 [SC] [expires: 2037-06-04]
+#      D88787786F0156551A9495C0AC675EB444A7DCF1
+#uid           [ unknown] Daniel Villarreal (AMARILLOX3434) <danielvillarrealolmedo@gmail.com>
+#sub   rsa4096 2026-03-18 [E] [expires: 2037-06-04]
+
+#Este comando hace un mensaje en un documento de texto
+$ echo "Todo billar bro" > doc_no_cifrado.txt
