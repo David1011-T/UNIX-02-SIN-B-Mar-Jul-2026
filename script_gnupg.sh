@@ -117,3 +117,12 @@ gpg --armor --export-secret-keys 1C9B516DB919F577
 #pZkh34jS1GWB8B4FLyv4YRwOAqa44oQR5hvz90YM9puXhw==
 #=ocF4
 #-----END PGP PRIVATE KEY BLOCK-----
+
+#Este comando lista todas las llaves
+gpg --list-keys
+#/home/codespace/.gnupg/pubring.kbx
+#----------------------------------
+#pub   rsa4096 2026-03-18 [SC] [expires: 2027-03-18]
+#      A5B18D0E6BF68025BB6F1C431C9B516DB919F577
+#uid           [ultimate] David Alejandro Torres Vengas (12345678) <davidsitotorres8@gmail.com>
+#sub   rsa4096 2026-03-18 [E] [expires: 2027-03-18]
