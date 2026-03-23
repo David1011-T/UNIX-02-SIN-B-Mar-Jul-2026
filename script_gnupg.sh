@@ -163,3 +163,9 @@ gpg --output doc_cifrado.txt --encrypt --recipient D88787786F0156551A9495C0AC675
 #you may answer the next question with yes.
 
 #Use this key anyway? (y/N) y
+
+#Este comando decifra el archivo cifrado que mi compa hizo con mi llave publica
+gpg --decrypt DAVID_doc_cifrado.txt
+#gpg: encrypted with rsa4096 key, ID D87B8615073BC8E3, created 2026-03-18
+#      "David Alejandro Torres Vengas (12345678) <davidsitotorres8@gmail.com>"
+#when haces tus momos en workspaces xdxdxd el futuro es hoy oiste diseñador grafico but te sacan del repositorio: ooo mi llave publica xdxdxd
