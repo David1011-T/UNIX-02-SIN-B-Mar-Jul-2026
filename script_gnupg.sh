@@ -220,3 +220,7 @@ gpg --sign-key AC675EB444A7DCF1
 #key "David Alejandro Torres Vengas (12345678) <davidsitotorres8@gmail.com>" (1C9B516DB919F577)
 
 #Really sign? (y/N) y
+
+#Este comando firma el documento en binario
+gpg --output doc_no_cifrado_firmado_binario.txt --sign doc_no_cifrado.txt
+
