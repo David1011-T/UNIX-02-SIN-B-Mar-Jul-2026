@@ -198,3 +198,25 @@ gpg --edit-key danielvillarrealolmedo@gmail.com
 #unless you restart the program.
 
 #gpg> q
+#Este comando firma la llave
+gpg --sign-key AC675EB444A7DCF1
+#pub  rsa4096/AC675EB444A7DCF1
+#     created: 2026-03-18  expires: 2037-06-04  usage: SC  
+#     trust: full          validity: unknown
+#sub  rsa4096/2F4F679F461514E1
+#     created: 2026-03-18  expires: 2037-06-04  usage: E   
+#[ unknown] (1). Daniel Villarreal (AMARILLOX3434) <danielvillarrealolmedo@gmail.com>
+
+
+#pub  rsa4096/AC675EB444A7DCF1
+#     created: 2026-03-18  expires: 2037-06-04  usage: SC  
+#     trust: full          validity: unknown
+# Primary key fingerprint: D887 8778 6F01 5655 1A94  95C0 AC67 5EB4 44A7 DCF1
+
+#     Daniel Villarreal (AMARILLOX3434) <danielvillarrealolmedo@gmail.com>
+
+#This key is due to expire on 2037-06-04.
+#Are you sure that you want to sign this key with your
+#key "David Alejandro Torres Vengas (12345678) <davidsitotorres8@gmail.com>" (1C9B516DB919F577)
+
+#Really sign? (y/N) y
