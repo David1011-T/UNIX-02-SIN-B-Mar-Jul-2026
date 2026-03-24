@@ -174,5 +174,27 @@ gpg --decrypt DAVID_doc_cifrado.txt
 #Este comando firma el documento de texto
 gpg --output doc_no_cifrado_firmado.txt --clearsign doc_no_cifrado.txt
 
+
+#Este comando nos permite editar una llave
+gpg --edit-key danielvillarrealolmedo@gmail.com
+#(by looking at passports, checking fingerprints from different sources, etc.)
+
+#  1 = I don't know or won't say
+#  2 = I do NOT trust
+#  3 = I trust marginally
+#  4 = I trust fully
+#  5 = I trust ultimately
+#  m = back to the main menu
 #
-gpg
+#Your decision? 4
+#Se le asgina un nivel de confianza a la llave de mi compa
+#pub  rsa4096/AC675EB444A7DCF1
+#     created: 2026-03-18  expires: 2037-06-04  usage: SC  
+#     trust: full          validity: unknown
+#sub  rsa4096/2F4F679F461514E1
+#     created: 2026-03-18  expires: 2037-06-04  usage: E   
+#[ unknown] (1). Daniel Villarreal (AMARILLOX3434) <danielvillarrealolmedo@gmail.com>
+#Please note that the shown key validity is not necessarily correct
+#unless you restart the program.
+
+#gpg> q
