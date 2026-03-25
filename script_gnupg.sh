@@ -229,6 +229,12 @@ gpg --sign-key AC675EB444A7DCF1
 #Este comando firma el documento en binario
 gpg --output doc_no_cifrado_firmado_binario.txt --sign doc_no_cifrado.txt
 
+#Este comando verfica la firma del documento binario de mi compa
+gpg --verify David_doc_no_cifrado_binario.txt
+#gpg: Signature made Wed Mar 25 03:07:45 2026 UTC
+#gpg:                using RSA key D88787786F0156551A9495C0AC675EB444A7DCF1
+#gpg: Good signature from "Daniel Villarreal (AMARILLOX3434) <danielvillarrealolmedo@gmail.com>" [full]
+
 #Este comando firma el documento y separa la firma del documento
 gpg --output firma_separada_doc_no_cifrado.sig --detach-sign doc_no_cifrado.txt
 
