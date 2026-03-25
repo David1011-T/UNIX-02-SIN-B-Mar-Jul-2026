@@ -174,6 +174,11 @@ gpg --decrypt DAVID_doc_cifrado.txt
 #Este comando firma el documento de texto
 gpg --output doc_no_cifrado_firmado.txt --clearsign doc_no_cifrado.txt
 
+#Este comando verifica la firma del documento de mi compa
+gpg --verify David_doc_no_cifrado_firmado.txt
+#gpg: Signature made Wed Mar 25 03:05:49 2026 UTC
+#gpg:                using RSA key D88787786F0156551A9495C0AC675EB444A7DCF1
+#gpg: Good signature from "Daniel Villarreal (AMARILLOX3434) <danielvillarrealolmedo@gmail.com>" [full]
 
 #Este comando nos permite editar una llave
 gpg --edit-key danielvillarrealolmedo@gmail.com
