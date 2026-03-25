@@ -252,3 +252,11 @@ gpg --output doc_cifrado_y_firmado.txt --encrypt --sign --recipient D88787786F01
 #gpg: depth: 0  valid:   1  signed:   1  trust: 0-, 0q, 0n, 0m, 0f, 1u
 #gpg: depth: 1  valid:   1  signed:   0  trust: 0-, 0q, 0n, 0m, 1f, 0u
 #gpg: next trustdb check due at 2027-03-18
+
+#Este comando descifra y valida la firma del documento de mi compa
+gpg --output doc_cifrado_y_firmado_descifrado_y_validado.txt --decrypt David_doc_cifrado_firmado.txt
+#gpg: encrypted with rsa4096 key, ID D87B8615073BC8E3, created 2026-03-18
+#      "David Alejandro Torres Vengas (12345678) <davidsitotorres8@gmail.com>"
+#gpg: Signature made Wed Mar 25 16:06:47 2026 UTC
+#gpg:                using RSA key D88787786F0156551A9495C0AC675EB444A7DCF1
+#gpg: Good signature from "Daniel Villarreal (AMARILLOX3434) <danielvillarrealolmedo@gmail.com>" [full]
