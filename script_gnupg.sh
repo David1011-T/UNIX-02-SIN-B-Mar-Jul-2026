@@ -260,3 +260,7 @@ gpg --output doc_cifrado_y_firmado_descifrado_y_validado.txt --decrypt David_doc
 #gpg: Signature made Wed Mar 25 16:06:47 2026 UTC
 #gpg:                using RSA key D88787786F0156551A9495C0AC675EB444A7DCF1
 #gpg: Good signature from "Daniel Villarreal (AMARILLOX3434) <danielvillarrealolmedo@gmail.com>" [full]
+
+#Este comando comprueba si se descifro el documento de mi compa
+cat doc_cifrado_y_firmado_descifrado_y_validado.txt
+#when haces tus momos en workspaces xdxdxd el futuro es hoy oiste diseñador grafico but te sacan del repositorio: ooo mi llave publica xdxdxd
