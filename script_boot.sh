@@ -23,3 +23,22 @@ mkdir -p /tmp/prueba/sub1 /tmp/prueba/sbu2
 stat /tmp/prueba
 #Shows a manual for the command that is next to it
 man 
+#Print working directory. Shows the directory that is in use
+pwd
+#Who am i? shows the user of the terminal
+whoami
+#Lists the file
+ls
+#Shows details about the file were in
+ls -l
+#Shows details all about the file were in
+ls -la
+#Shows details of size about the file were in
+ls -lh
+#How many times the file was modified
+ls -lt
+#What lies in the root of the system
+ls /
+#Explores directories of the system, only shows the first 20 lines
+ls /etc | head -20
+ls /dev | head -20
