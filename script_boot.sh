@@ -15,3 +15,5 @@ ls -lai
 #total 12
 #925549 drwxr-xr-x 2 codespace codespace 4096 Apr  6 12:37 .
 #918515 drwxr-x--- 1 codespace codespace 4096 Apr  6 12:37 ..
+#Shows last acces, modify, change and birth of the file. And blocks where the file is. Shows if the disk is virtual or physical and in which partition is it
+stat .
