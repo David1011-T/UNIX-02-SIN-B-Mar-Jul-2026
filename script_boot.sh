@@ -12,3 +12,6 @@ mkdir proyecto
 cd proyecto/
 #Shows info about the file were on like the inode, characteristics and hidden files
 ls -lai
+#total 12
+#925549 drwxr-xr-x 2 codespace codespace 4096 Apr  6 12:37 .
+#918515 drwxr-x--- 1 codespace codespace 4096 Apr  6 12:37 ..
