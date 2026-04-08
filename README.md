@@ -48,3 +48,4 @@ mkdir m
 mount boot m
 cp bzImage init.cpio m
 umount m
+qemu-system-x86_64 -nographic -append "console=ttyS0" \ -kernel bzImage -initrd init.cpio -drive file=boot,format=raw
