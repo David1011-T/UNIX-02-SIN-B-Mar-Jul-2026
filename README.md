@@ -40,3 +40,11 @@ sudo rm linuxrc
 sudo chmod +x init
 sudo sh -c  'find . | cpio -o -H newc > ../init.cpio'
 cd ..
+sudo su
+dd if=/dev/zero of=boot bs=1M count=50
+mkfs -t fat boot
+syslinux boot
+mkdir m
+mount boot m
+cp bzImage init.cpio m
+umount m
