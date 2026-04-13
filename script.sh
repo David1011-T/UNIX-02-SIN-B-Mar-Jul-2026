@@ -6,3 +6,5 @@ ls -h #Lists files humanly legible
 ls -l -a -h #Lists all files in format long list and humanly legible
 ls -l -ah #Lists all files in format long list and humanly legible
 ls -lah #Lists all files in format long list and humanly legible
+mkdir -- -rf #Creates a directory named "-rf" the "--" states that what is next is an argument
+rmdir -- -rf #Deletes a directory named "-rf" the "--" states that what is next is an argument
