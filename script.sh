@@ -1,3 +1,8 @@
 ls -a #lists all in the file Short command
 ls --all #lists all in the file Large command
 #command-options-arguments
+ls -l #Lists in format "long list"
+ls -h #Lists files humanly legible
+ls -l -a -h #Lists all files in format long list and humanly legible
+ls -l -ah #Lists all files in format long list and humanly legible
+ls -lah #Lists all files in format long list and humanly legible
