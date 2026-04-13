@@ -8,3 +8,5 @@ ls -l -ah #Lists all files in format long list and humanly legible
 ls -lah #Lists all files in format long list and humanly legible
 mkdir -- -rf #Creates a directory named "-rf" the "--" states that what is next is an argument
 rmdir -- -rf #Deletes a directory named "-rf" the "--" states that what is next is an argument
+ls --help #Short explanation about the command ls
+man ls #Complete manual about ls
