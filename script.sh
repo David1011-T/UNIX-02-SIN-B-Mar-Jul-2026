@@ -12,4 +12,9 @@ ls --help #Short explanation about the command ls
 man ls #Complete manual about ls
 #--depth <depth>
            #Create a shallow clone with a history truncated to the specified number of commits. Implies --single-branch unless --no-single-branch is given to
-           #fetch the histories near the tips of all branches. If you want to clone submodules shallowly, also pass --shallow-submodules.
+           #fetch the histories near the tips of all branches. If you want to clone submodules shallowly, also pass --shallow-submodules.q
+chmod #Sintaxis: Who,operator,permissions, file. Change Mode
+chmod +x script.sh #Everyone can execute script.sh
+chmod u+x script.sh #Only the owner can execute script.sh
+chmod o-r script.sh #Remove reading to "others"
+chmod u+rw,go-rwx script.sh #Owner reads/writes, nobody else cans
