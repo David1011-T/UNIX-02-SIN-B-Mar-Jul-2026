@@ -10,3 +10,6 @@ mkdir -- -rf #Creates a directory named "-rf" the "--" states that what is next 
 rmdir -- -rf #Deletes a directory named "-rf" the "--" states that what is next is an argument
 ls --help #Short explanation about the command ls
 man ls #Complete manual about ls
+#--depth <depth>
+           #Create a shallow clone with a history truncated to the specified number of commits. Implies --single-branch unless --no-single-branch is given to
+           #fetch the histories near the tips of all branches. If you want to clone submodules shallowly, also pass --shallow-submodules.
