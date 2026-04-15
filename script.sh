@@ -19,3 +19,6 @@ chmod u+x script.sh #Only the owner can execute script.sh
 chmod o-r script.sh #Remove reading to "others"
 chmod u+rw,go-rwx script.sh #Owner reads/writes, nobody else cans
 sudo echo "hola" > /etc/archivo_protegido # bash: /etc/archivo_protegido: Permission denied. It divides the command in 2 parts and sudo executes for the 2 parts and there isn´t permissions for root
+echo "hola" | sudo tee /etc/archivo_protegido > /dev/null #echo executes as a normal user, the pipeline passes the output to tee. sudo tee executes with priviliges fot root. >/dev/null makes that the message in the terminal
+cat /etc/archivo_protegido
+echo "hola" | sudo tee /etc/archivo_protegido #echo executes as a normal user and prints "hola", the pipeline passes the output to tee. sudo tee executes with priviliges fot root.
