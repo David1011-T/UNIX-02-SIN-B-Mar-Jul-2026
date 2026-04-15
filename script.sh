@@ -18,3 +18,4 @@ chmod +x script.sh #Everyone can execute script.sh
 chmod u+x script.sh #Only the owner can execute script.sh
 chmod o-r script.sh #Remove reading to "others"
 chmod u+rw,go-rwx script.sh #Owner reads/writes, nobody else cans
+sudo echo "hola" > /etc/archivo_protegido # bash: /etc/archivo_protegido: Permission denied. It divides the command in 2 parts and sudo executes for the 2 parts and there isn´t permissions for root
