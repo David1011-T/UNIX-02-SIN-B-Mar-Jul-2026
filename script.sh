@@ -25,3 +25,5 @@ echo "hola" | sudo tee /etc/archivo_protegido #echo executes as a normal user an
 sudo sh -c 'echo "chao" >> /etc/archivo_protegido' #Opens a shell in sudo and says to shell -c that everything that is in '' interprets the shell
 cat /etc/archivo_protegido #calls for the content of the file
 sudo su - #Enters root mode, you can exit with "exit"
+echo "$HOME" #Expands variable "/home/codespace"
+echo '$HOME' #Prints '$HOME' "$HOME"
