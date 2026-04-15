@@ -24,3 +24,4 @@ cat /etc/archivo_protegido #calls for the content of the file
 echo "hola" | sudo tee /etc/archivo_protegido #echo executes as a normal user and prints "hola", the pipeline passes the output to tee. sudo tee executes with priviliges fot root.
 sudo sh -c 'echo "chao" >> /etc/archivo_protegido' #Opens a shell in sudo and says to shell -c that everything that is in '' interprets the shell
 cat /etc/archivo_protegido #calls for the content of the file
+sudo su - #Enters root mode, you can exit with "exit"
