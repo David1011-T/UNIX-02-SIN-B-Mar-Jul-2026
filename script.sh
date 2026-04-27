@@ -117,7 +117,11 @@ ls -l comun #Lists permissions for the file "comun"
 #-rw-r--r-- 1 codespace grupo_test 0 Apr 27 13:27 comun
 sudo chown luna:grupo_test mi_archivo #Changes the owner of the file "mi archivo" for the user luna and it`s group
 ls -l mi_archivo #Lists permissions for the file mi_archivo
+#-rw-r--r-- 1 luna grupo_test 5 Apr 27 13:12 mi_archivo
 mkdir -p proyecto/sub #Creates directory with a sub-directory "proyecto/sub"
 touch proyecto/readme proyecto/sub/datos #Creates file "readme" in proyecto/ and "datos" in proyecto/sub
 sudo chown -R luna:grupo_test proyecto #Changes the owner of the directory "proyecto" for the user "luna:grupo_test"
 ls -lR proyecto #Lists permissions recursively of the directory "proyecto"
+#total 4
+#-rw-r--r-- 1 luna grupo_test    0 Apr 27 13:54 readme
+#drwxr-xr-x 2 luna grupo_test 4096 Apr 27 13:54 sub
