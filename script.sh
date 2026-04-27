@@ -27,3 +27,82 @@ cat /etc/archivo_protegido #calls for the content of the file
 sudo su - #Enters root mode, you can exit with "exit"
 echo "$HOME" #Expands variable "/home/codespace"
 echo '$HOME' #Prints '$HOME' "$HOME"
+$ umask #Predetermined mask for the operating system
+touch archivo 1 #Creates a file named "archivo1"
+mkdir directorio 1 #Creates a directory named "directorio1"
+ls -l #Lists permissions for all the files and directories
+#total 64
+#-rw-rw-rw-  1 codespace root      34523 Apr 27 12:07 LICENSE
+#-rw-rw-rw-  1 codespace root         70 Apr 27 12:07 README.md
+#-rw-rw-rw-  1 codespace codespace     0 Apr 27 12:31 archivo1
+#drwxrwxrwx+ 2 codespace codespace  4096 Apr 27 12:32 directorio1
+#-rw-rw-rw-  1 codespace root        659 Apr 27 12:07 ejercicio1.sh
+#-rw-rw-rw-  1 codespace root        326 Apr 27 12:07 ejercicio2.sh
+#-rwxrwxrwx  1 codespace root         45 Apr 27 12:07 hola.sh
+#-rwxrwxrwx  1 codespace root          0 Apr 27 12:07 prueba.txt
+#-rwxrwxrwx  1 codespace root       2364 Apr 27 12:31 script.sh
+umask 027 #Changes value of the mask to 027
+touch archivo2 #Creates a file named "archivo2"
+mkdir directorio2 #Creates a directory named "directorio2"
+ls -l #Lists permissions for all the files and directories
+#-rw-rw-rw-  1 codespace root      34523 Apr 27 12:07 LICENSE
+#-rw-rw-rw-  1 codespace root         70 Apr 27 12:07 README.md
+#-rw-rw-rw-  1 codespace codespace     0 Apr 27 12:31 archivo1
+#-rw-rw-rw-  1 codespace codespace     0 Apr 27 12:36 archivo2
+#drwxrwxrwx+ 2 codespace codespace  4096 Apr 27 12:32 directorio1
+#drwxrwxrwx+ 2 codespace codespace  4096 Apr 27 12:36 directorio2
+#-rw-rw-rw-  1 codespace root        659 Apr 27 12:07 ejercicio1.sh
+#-rw-rw-rw-  1 codespace root        326 Apr 27 12:07 ejercicio2.sh
+#-rwxrwxrwx  1 codespace root         45 Apr 27 12:07 hola.sh
+#-rwxrwxrwx  1 codespace root          0 Apr 27 12:07 prueba.txt
+#-rwxrwxrwx  1 codespace root       2701 Apr 27 12:37 script.sh
+umask 077 #Changes value of the mask to 077
+touch secreto.txt #Creates a file named "secreto.txt"
+mkdir privado #Creates a directory named "privado"
+ls -l #Lists permissions for all the files and directories
+#total 72
+#-rw-rw-rw-  1 codespace root      34523 Apr 27 12:07 LICENSE
+#-rw-rw-rw-  1 codespace root         70 Apr 27 12:07 README.md
+#-rw-rw-rw-  1 codespace codespace     0 Apr 27 12:31 archivo1
+#-rw-rw-rw-  1 codespace codespace     0 Apr 27 12:36 archivo2
+#drwxrwxrwx+ 2 codespace codespace  4096 Apr 27 12:32 directorio1
+#drwxrwxrwx+ 2 codespace codespace  4096 Apr 27 12:36 directorio2
+#-rw-rw-rw-  1 codespace root        659 Apr 27 12:07 ejercicio1.sh
+#-rw-rw-rw-  1 codespace root        326 Apr 27 12:07 ejercicio2.sh
+#-rwxrwxrwx  1 codespace root         45 Apr 27 12:07 hola.sh
+#drwxrwxrwx+ 2 codespace codespace  4096 Apr 27 12:40 privado
+#-rwxrwxrwx  1 codespace root          0 Apr 27 12:07 prueba.txt
+#-rwxrwxrwx  1 codespace root       4214 Apr 27 12:40 script.sh
+#-rw-rw-rw-  1 codespace codespace     0 Apr 27 12:40 secreto.txt
+sudo apt-get update #Gets all updates
+sudo apt-get install acl #Install app acl
+sudo chown -R $(whoami) . #Changes owner for the files and directories to the actual user
+sudo setfacl -bnR . #Changes to the basic permissions to the files
+umask 077 #Changes mask to 077
+touch se #Creates file "se"
+mkdir pri #Creates directory "pri"
+ls -l #Lists all files and permissions
+#total 76
+#-rw-rw-rw- 1 codespace root      34523 Apr 27 12:07 LICENSE
+#-rw-rw-rw- 1 codespace root         70 Apr 27 12:07 README.md
+#-rw-rw-rw- 1 codespace codespace     0 Apr 27 12:31 archivo1
+#-rw-rw-rw- 1 codespace codespace     0 Apr 27 12:36 archivo2
+#drwxrwxrwx 2 codespace codespace  4096 Apr 27 12:32 directorio1
+#drwxrwxrwx 2 codespace codespace  4096 Apr 27 12:36 directorio2
+#-rw-rw-rw- 1 codespace root        659 Apr 27 12:07 ejercicio1.sh
+#-rw-rw-rw- 1 codespace root        326 Apr 27 12:07 ejercicio2.sh
+#-rwxrwxrwx 1 codespace root         45 Apr 27 12:07 hola.sh
+#drwx------ 2 codespace codespace  4096 Apr 27 12:49 pri
+#drwxrwxrwx 2 codespace codespace  4096 Apr 27 12:40 privado
+#-rwxrwxrwx 1 codespace root          0 Apr 27 12:07 prueba.txt
+#-rwxrwxrwx 1 codespace root       5062 Apr 27 12:41 script.sh
+#-rw------- 1 codespace codespace     0 Apr 27 12:49 se
+#-rw-rw-rw- 1 codespace codespace     0 Apr 27 12:40 secreto.txt
+umask 022 #Changes mask value to 022
+whoami #Who`s the user
+echo "Hola" > mi_archivo #Creates file "mi_archivo" with "Hola"
+ls -l mi_archivo #Lists permissions for the file "mi_archivo"
+#-rw-r--r-- 1 codespace codespace 5 Apr 27 13:12 mi_archivo
+sudo useradd -m -s /usr/bin/zsh luna #Creates new user named "luna"
+sudo chown luna mi_archivo #Changes owner of the file "mi_archivo" to luna
+ls -l mi_archivo #Lists permissions for the file "mi_archivo"
