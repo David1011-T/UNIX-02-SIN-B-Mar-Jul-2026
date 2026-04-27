@@ -106,3 +106,14 @@ ls -l mi_archivo #Lists permissions for the file "mi_archivo"
 sudo useradd -m -s /usr/bin/zsh luna #Creates new user named "luna"
 sudo chown luna mi_archivo #Changes owner of the file "mi_archivo" to luna
 ls -l mi_archivo #Lists permissions for the file "mi_archivo"
+groups #Shows groups
+sudo groupadd grupo_test #Creates a new group
+touch comun #Creates a file named "comun"
+ls -l comun #Lists permissions for the file "comun"
+#-rw-r--r-- 1 codespace codespace 0 Apr 27 13:27 comun
+sudo usermod -a -G grupo_test luna #Adds owner to "grupo_test",  "luna"
+sudo chgrp grupo_test comun #Changes group in comun for "grupo_test"
+ls -l comun #Lists permissions for the file "comun"
+#-rw-r--r-- 1 codespace grupo_test 0 Apr 27 13:27 comun
+sudo chown luna:grupo_test mi_archivo #Changes the owner of the file "mi archivo" for the user luna and it`s group
+ls -l mi_archivo #Lists permissions for the file mi_archivo
