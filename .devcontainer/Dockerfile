@@ -211,29 +211,24 @@ RUN git config --system --add safe.directory '*' \
  && git config --system pull.rebase false \
  && git lfs install --system
 
-# ----------------------------------------------------------------------------
-# CMD: comando que se ejecuta por defecto al arrancar el contenedor
-# ----------------------------------------------------------------------------
-# Lanza una shell bash interactiva. Codespaces la sobrescribe con su
-# propia terminal integrada de VS Code, pero es buena práctica dejarla
-# definida para que la imagen sea usable también con Docker puro.
-# Prompt del curso para bash
+#Cambiar la sell de login de root a zsh dentro de la imagen,
+#para que chsh ya no haga falta y todo sea consistente.
+RUN chsh -s /usr/bin/zsh root
+
+# Prompt institucional personalizado
 RUN cat >> /root/.zshrc <<'EOF'
 
-# ===== Prompt del curso =====
-__set_prompt() {
-    local ec=$?
-    local mark
-    if [ $ec -eq 0 ]; then
-        mark='\[\e[32m\]✓\[\e[0m\]'
-    else
-        mark="\[\e[31m\]✗ $ec\[\e[0m\]"
-    fi
-    PS1="\[\e[36m\][David-Torres]\[\e[0m\] \[\e[33m\]\W\[\e[0m\] $mark \$ "
-}
-PROMPT_COMMAND=__set_prompt
+# Carga de colores para Zsh
+autoload -U colors && colors
+
+# Configuración del Prompt:
+# %F{color} abre el color, %f lo cierra.
+# %(?.éxito.error) es un condicional basado en el estado del último comando.
+PROMPT='%F{cyan}[David Torres]%f %F{yellow}%1~%f %(?.%F{green}➜.%F{red}✘)%f %# '
+
 EOF
-CMD ["/bin/zsh"]
+
+CMD ["/usr/bin/zsh"]
 
 
 
