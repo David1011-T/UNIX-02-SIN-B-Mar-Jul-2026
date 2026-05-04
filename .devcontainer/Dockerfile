@@ -224,7 +224,7 @@ autoload -U colors && colors
 # Configuración del Prompt:
 # %F{color} abre el color, %f lo cierra.
 # %(?.éxito.error) es un condicional basado en el estado del último comando.
-PROMPT='%F{cyan}[David Torres]%f %F{yellow}%1~%f %(?.%F{green}➜.%F{red}✘)%f %# '
+PROMPT='%F{cyan}[David Torres]%f %F{yellow}%1~%f %(?.%F{green}✓.%F{red}✘)%f %# '
 
 EOF
 
