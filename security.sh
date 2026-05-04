@@ -3,3 +3,7 @@ cat /etc/passwd | head -10 #This command calls what´s inside the folder /etc/pa
 cat /etc/group | head -10 #This command calls what´s inside the folder /etc/group and gives only the first 10 lines
 groups # Shows the groups 
 groups $USER #Shows the groups the actual user is in
+id -u #User ID
+id -g #Principal group ID
+id -G #Every group ID
+cat /etc/group | grep root #This command calls what's inside the folder /etc/group and filters for the group root
