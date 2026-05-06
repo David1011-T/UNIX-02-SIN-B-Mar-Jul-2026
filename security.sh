@@ -10,3 +10,18 @@ cat /etc/group | grep root #This command calls what's inside the folder /etc/gro
 cat /etc/gshadow #This command shows what´s in /etc/gshadow, everything with * has a password
 mkdir ~/proyecto_unix/ #Creates a directory called ~/proyecto_unix/
 ls -la ~/proyecto_unix/ #Lists all permissions for the foler ~/proyecto_unix/
+sudo groupadd desarrolladores #Create simple group
+sudo groupadd -g 2000 operaciones #Creates group with specific GID
+sudo groupadd -system servicios_web #system group
+#Verify that were created
+grep "desarrolladores\|operaciones\|servicios_web" /etc/group 
+grep -E "desarrolladores\|operaciones|servicios_web" /etc/group
+#View principal options
+groupadd --help
+grep "GID_MIN\|GID_MAX\|SYS_GID" /etc/login.defs #View the range of GIDs in the system
+#The system groups that have less than the minimum user GID
+#In Ububntu tipically
+#SYS_GID_MIN= 100
+#SYS_GID_MAX= 999
+#GID_MIN= 1000
+#GID_MAX= 60000
