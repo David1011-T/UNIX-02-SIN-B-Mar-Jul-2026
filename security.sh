@@ -69,3 +69,6 @@ touch ~/lab_chgrp/scripts/deploy.sh
 #View initial stat - everyone has the user group
 ls -la ~/lab_chgrp/proyectos/
 ls -la ~/lab_chgrp/reportes/
+#Change the group of a file
+sudo chgrp desarrolladores ~/lab_chgrp/proyectos/app.py
+ls -la ~/lab_chgrp/proyectos
