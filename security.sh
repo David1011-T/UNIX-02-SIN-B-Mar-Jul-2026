@@ -56,3 +56,6 @@ id root
 #Now the ERROR: usermod without -a
 sudo usermod -G desarrolladores root #This deletes every secondary groups except desarrolladores
 id root #Lost all the other groups
+#Restore
+sudo usermod -aG diseno,marketing,grupo_temporal root
+id root #Restored
