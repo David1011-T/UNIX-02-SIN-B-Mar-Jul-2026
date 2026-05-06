@@ -33,3 +33,12 @@ sudo addgroup --gid 2100 marketing
 sudo addgroup --system cache_web
 #Verify
 grep "diseno\|marketing\|cache_web" /etc/group
+#View in which groups is the actual user
+groups
+id
+#Add the user to a group with usermod
+sudo usermod -aG desarrolladores $USER
+sudo usermod -aG diseno $USER
+#Using $USER gave problems because it didn't have anything. We can use root or (whoami)
+sudo usermod -aG desarrolladores root
+sudo usermod -aG diseno root
