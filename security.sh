@@ -72,3 +72,12 @@ ls -la ~/lab_chgrp/reportes/
 #Change the group of a file
 sudo chgrp desarrolladores ~/lab_chgrp/proyectos/app.py
 ls -la ~/lab_chgrp/proyectos
+#Change group of multiple files
+sudo chgrp diseno \ ~/lab_chgrp/proyectos/config.json \ ~/lab_chgrp/reportes/informe.txt
+ls -la ~/lab_chgrp/proyectos/
+ls -la ~/lab_chgrp/reportes/
+#Change recursivly everything in one directory
+sudo chgrp -R desarrolladores ~/lab_chgrp/scripts/
+ls -laR ~/lab_chgrps/scripts/
+#Verbose to see what changes
+sudo chgrp -Rv diseno ~/lab_chgrp/reportes/
