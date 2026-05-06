@@ -42,3 +42,17 @@ sudo usermod -aG diseno $USER
 #Using $USER gave problems because it didn't have anything. We can use root or (whoami)
 sudo usermod -aG desarrolladores root
 sudo usermod -aG diseno root
+#Verify change in /etc/group
+grep "desarrolladores\|diseno" /etc/group
+#Add user to a group with adduser
+sudo adduser root marketing
+#Verify actual state
+id root
+grep root /etc/group
+#Create a temporal group for the demo
+sudo groupadd grupo_temporal
+sudo usermod -aG grupo_temporal root
+id root
+#Now the ERROR: usermod without -a
+sudo usermod -G desarrolladores root #This deletes every secondary groups except desarrolladores
+id root #Lost all the other groups
