@@ -11,3 +11,8 @@ echo "Grupo actual: $(id -gn)"
 #Create file before using newgrp
 touch ~/antes_de_newgrp.txt
 ls -la ~/antes_de_newgrp.txt
+#Change to group 'desarrolladores'
+newgrp desarrolladores
+#Verify that the active group changed
+id -gn
+echo "Nuevo grupo activo: $(id -gn)"
