@@ -22,3 +22,9 @@ ls -la ~/dentro_de_newgrp.txt
 #The group now is 'desarrolladores'
 #Create directory
 mkdir -p ~/proyecto_dev/src
+# proyecto_dev/ has the group 'desarrolladores'
+#Exit the subshell of newgrp
+exit
+#Verify that we're back at the original group
+id -gn
+echo "Grupo restaurado: $(id -gn)"
