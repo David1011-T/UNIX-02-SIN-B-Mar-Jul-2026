@@ -30,3 +30,8 @@ id -gn
 echo "Grupo restaurado: $(id -gn)"
 #Compare the 2 files
 ls -la ~/antes_de_newgrp.txt ~/dentro_de_newgrp.txt
+#newgrp creates a subshell - this is demonstrable
+echo "PID del shell actual: $$"
+newgrp desarrolladores
+echo "PID dentro de newgrp: $$"
+# The PID is diferent - is a son's process
