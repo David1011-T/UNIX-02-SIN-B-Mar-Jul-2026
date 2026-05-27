@@ -35,3 +35,14 @@ echo "PID del shell actual: $$"
 newgrp desarrolladores
 echo "PID dentro de newgrp: $$"
 # The PID is diferent - is a son's process
+
+#Create a group with a password
+groupadd grupo_restringido
+gpasswd grupo_restringido
+#The sistem will ask a password for the group
+#A user that's not from the group can join temporarly if it knows the password
+newgrp grupo_restringido
+#The sistem will ask the password for the group
+#If the password is correct, it will join temporarly
+id -gn
+exit #When exit, losses the temporal membership
