@@ -97,7 +97,7 @@
             // Codespace (no tocan la configuración personal del estudiante).
             "settings": {
     // Cambiamos 'bash' por 'zsh' para que cargue tu prompt personalizado
-    "terminal.integrated.defaultProfile.linux": "zsh", 
+    "terminal.integrated.defaultProfile.linux": "bash", 
     
     "files.eol": "\n"
             }
