@@ -13,3 +13,6 @@ if check_if_root; then #Comparison if the result of the funcion is 1 or 0
 else #Continues if the result before is false
  echo "User is not root!" #Prints "User is not root!"
 fi #Ends if loop
+
+#useradd Mini 
+#su Mini
