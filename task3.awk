@@ -1,1 +1,0 @@
-awk -F',' 'NR > 1 && $3 == "FINAL" {printf "%-10s %3s\n", $1, $4}' Lab03-data.csv

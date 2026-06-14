@@ -1,1 +1,0 @@
-awk -F',' 'NR > 1 && $4 < (0.6 * $5) {count++} END {print count+0}' Lab03-data.csv
