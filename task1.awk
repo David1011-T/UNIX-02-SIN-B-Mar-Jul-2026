@@ -1,0 +1,1 @@
+awk -F',' 'NR > 1 {count++} END {print count}' Lab03-data.csv
