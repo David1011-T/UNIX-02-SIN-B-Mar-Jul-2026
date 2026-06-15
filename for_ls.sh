@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
-for file in $(ls .); do
+for file in $(ls /); do
  echo "File: ${file}"
 done
