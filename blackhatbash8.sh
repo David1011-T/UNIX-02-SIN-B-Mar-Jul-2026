@@ -28,3 +28,7 @@ cat newlog1.txt
 sed '1d' newlog.txt > newlogd.txt
 
 cat newlogd.txt
+
+sed '$d' newlog.txt > newlogl.txt
+
+cat newlogl.txt
