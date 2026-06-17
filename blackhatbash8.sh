@@ -61,3 +61,7 @@ CTRL-Z sleep 100
 
 bg %1
 #[1]+ sleep 100 &
+
+nohup ./excercise2.sh &
+#[1] 28467
+#nohup: se descarta la entrada y se añade la salida a 'nohup.out'
